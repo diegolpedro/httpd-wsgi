@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  apache:
+    # Usamos imagen oficial de apache y congelamos en apache 2.4.43 ( al dia la ultima)
+    build: .  # httpd:2.4.43
+    container_name: apache_ws
+    volumes:
+    # Montamos nuestra web desde fuera en el directorio web del contenedor
+    # Se debe mantener actualizada la web en public-html para evitar levantar
+    # una web vieja en caso de caida.
+      - ./public-html/:/usr/local/apache2/htdocs/
+      - ./conf/:/usr/local/apache2/conf/
+      - ./app/:/app/
+    #restart: always
+    expose:
+      - 80
+    ports:
+      - 8000:80
