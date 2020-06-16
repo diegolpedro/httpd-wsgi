@@ -4,11 +4,14 @@ Repositorio Git para archivos de la imagen ahoravirtual/httpd-wsgi, generada a p
 <h3> Tags hasta el momento </h3>
 <ul>
 <li>latest, inicial o basica</li>
-<li>1.0, inicial o basica</li>
+<li>1.0, inicial o basica.</li>
+<li>1.1, Cambio de version por mod_wsgi 4.7.1 para poder utilizar daemon mode y multiples sitios.</li>
 </ul>
 <h3> Info </h3>
+Para correr el servidor ejecutar:<br>
+<code>sudo docker-compose exec <container> /bin/bash</code>
 Para obtener una linea de comandos y trabajar en el container, una vez lanzado ejecutar:<br>
-<code>sudo docker exec -it <id_container> /bin/bash</code>
+<code>sudo docker-compose exec <container> /bin/bash</code>
 </p>
 <h3>Directorios:</h3>
 <b>Apache root:</b> /usr/local/apache2 <br>

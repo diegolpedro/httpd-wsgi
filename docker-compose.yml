@@ -13,8 +13,9 @@ services:
       - ./public-html/:/usr/local/apache2/htdocs/
       - ./conf/:/usr/local/apache2/conf/
       - ./app/:/app/
-    #restart: always
+      - ./lets-certs/:/etc/letsencrypt/live
+    restart: unless-stopped
     expose:
       - 80
     ports:
-      - 8000:80
+      - 80:80
