@@ -9,7 +9,7 @@ Repositorio Git para archivos de la imagen ahoravirtual/httpd-wsgi, generada a p
 </ul>
 <h3> Info </h3>
 Para correr el servidor ejecutar:<br>
-<code>sudo docker-compose exec <container> /bin/bash</code>
+<code>sudo docker-compose up -d    # -d para dejarlo corriendo en segundo plano y no visualizar salida estandad.</code>
 Para obtener una linea de comandos y trabajar en el container, una vez lanzado ejecutar:<br>
 <code>sudo docker-compose exec <container> /bin/bash</code>
 </p>
